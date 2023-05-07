@@ -91,19 +91,23 @@ public class WebConfig {
 }
 ```
 
-### GameListRepository
+### GameRepository
 
 ```java
 @Query(nativeQuery = true, value = """
-	SELECT tb_game.id, tb_game.title, tb_game.game_year AS `year`, tb_game.img_url AS imgUrl, 
-	tb_game.short_description AS shortDescription, tb_belonging.position
-	FROM tb_game
-	INNER JOIN tb_belonging ON tb_game.id = tb_belonging.game_id
-	WHERE tb_belonging.list_id = :listId
-	ORDER BY tb_belonging.position
-		""")
-List<GameMinProjection> searchGameList(Long listId);
+		SELECT tb_game.id, tb_game.title, tb_game.game_year AS `year`, tb_game.img_url AS imgUrl,
+		tb_game.short_description AS shortDescription, tb_belonging.position
+		FROM tb_game
+		INNER JOIN tb_belonging ON tb_game.id = tb_belonging.game_id
+		WHERE tb_belonging.list_id = :listId
+		ORDER BY tb_belonging.position
+			""")
+List<GameMinProjection> searchByList(Long listId);
+```
 
+### GameListRepository
+
+```java
 @Modifying
 @Query(nativeQuery = true, value = "UPDATE tb_belonging SET position = :newPosition WHERE list_id = :listId AND game_id = :gameId")
 void updateBelongingPosition(Long listId, Long gameId, Integer newPosition);
