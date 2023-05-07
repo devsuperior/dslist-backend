@@ -27,6 +27,10 @@ https://www.youtube.com/@DevsuperiorJavaSpring
 | Sexta-feira 20h30 | Aula 5: Resumão e reforço do aprendizado |
 | Domingo 16h00 | Oficina: Avançando na modelagem de dados  |
 
+## Modelo de domínio DSList
+
+![Modelo de domínio DSList](https://raw.githubusercontent.com/devsuperior/java-spring-dslist/main/resources/dslist-model.png)
+
 ## Trechos de código
 
 ### Plug-in Maven
