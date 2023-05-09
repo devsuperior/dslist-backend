@@ -21,8 +21,8 @@ https://www.youtube.com/@DevsuperiorJavaSpring
 | Dia / horário  | Conteúdo |
 | ------------- | ------------- |
 | Segunda-feira 20h30 | Aula 1: Projeto estruturado |
-| Terça-feira 20h30  | Aula 2: Modelo de domínio |
-| Quarta-feira 20h30 | Aula 3: Deploy e caso de uso |
+| Terça-feira 20h30  | Aula 2: Domínio e consultas |
+| Quarta-feira 20h30 | Aula 3: Deploy e CORS |
 | Quinta-feira 20h30 | Aula 4: Endpoint especial |
 | Sexta-feira 20h30 | Aula 5: Resumão e reforço do aprendizado |
 | Domingo 16h00 | Oficina: Avançando na modelagem de dados  |
@@ -67,6 +67,39 @@ spring.h2.console.path=/h2-console
 # Show SQL
 spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.format_sql=true
+```
+
+### application-dev.properties
+
+```
+#spring.jpa.properties.javax.persistence.schema-generation.create-source=metadata
+#spring.jpa.properties.javax.persistence.schema-generation.scripts.action=create
+#spring.jpa.properties.javax.persistence.schema-generation.scripts.create-target=create.sql
+#spring.jpa.properties.hibernate.hbm2ddl.delimiter=;
+
+spring.datasource.url=jdbc:postgresql://localhost:5432/dscatalog
+spring.datasource.username=postgres
+spring.datasource.password=1234567
+
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true
+spring.jpa.hibernate.ddl-auto=none
+```
+
+### application-prod.properties
+```
+spring.datasource.url=${DB_URL}
+spring.datasource.username=${DB_USERNAME}
+spring.datasource.password=${DB_PASSWORD}
+
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true
+spring.jpa.hibernate.ddl-auto=none
+```
+
+### system.properties
+```
+java.runtime.version=17
 ```
 
 ### WebConfig
