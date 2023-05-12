@@ -72,9 +72,9 @@ spring.jpa.properties.hibernate.format_sql=true
 ### application-dev.properties
 
 ```
-#spring.jpa.properties.javax.persistence.schema-generation.create-source=metadata
-#spring.jpa.properties.javax.persistence.schema-generation.scripts.action=create
-#spring.jpa.properties.javax.persistence.schema-generation.scripts.create-target=create.sql
+#spring.jpa.properties.jakarta.persistence.schema-generation.create-source=metadata
+#spring.jpa.properties.jakarta.persistence.schema-generation.scripts.action=create
+#spring.jpa.properties.jakarta.persistence.schema-generation.scripts.create-target=create.sql
 #spring.jpa.properties.hibernate.hbm2ddl.delimiter=;
 
 spring.datasource.url=jdbc:postgresql://localhost:5432/dscatalog
