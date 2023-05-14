@@ -13,10 +13,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{host}}/games",
+					"raw": "http://localhost:8080/games",
+					"protocol": "http",
 					"host": [
-						"{{host}}"
+						"localhost"
 					],
+					"port": "8080",
 					"path": [
 						"games"
 					]
@@ -30,10 +32,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{host}}/games/1",
+					"raw": "http://localhost:8080/games/1",
+					"protocol": "http",
 					"host": [
-						"{{host}}"
+						"localhost"
 					],
+					"port": "8080",
 					"path": [
 						"games",
 						"1"
@@ -48,10 +52,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{host}}/lists",
+					"raw": "http://localhost:8080/lists",
+					"protocol": "http",
 					"host": [
-						"{{host}}"
+						"localhost"
 					],
+					"port": "8080",
 					"path": [
 						"lists"
 					]
@@ -75,10 +81,12 @@
 					}
 				],
 				"url": {
-					"raw": "{{host}}/lists/2/games",
+					"raw": "http://localhost:8080/lists/2/games",
+					"protocol": "http",
 					"host": [
-						"{{host}}"
+						"localhost"
 					],
+					"port": "8080",
 					"path": [
 						"lists",
 						"2",
@@ -113,10 +121,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{host}}/lists/2/replacement",
+					"raw": "http://localhost:8080/lists/2/replacement",
+					"protocol": "http",
 					"host": [
-						"{{host}}"
+						"localhost"
 					],
+					"port": "8080",
 					"path": [
 						"lists",
 						"2",
