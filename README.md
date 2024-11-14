@@ -6,7 +6,7 @@ Inscreva-se para receber no seu email:
 
 https://devsuperior.com.br
 
-    ATENÇÃO: os conteúdos ficarão disponíveis somente até domingo. Então organize-se, e bora pra cima! 
+    ATENÇÃO: os conteúdos ficarão gravados e disponíveis somente até domingo. Então organize-se, e bora pra cima! 
 
 **2. Tem alguma dúvida?**
 
@@ -14,18 +14,18 @@ Envie uma mensagem pra gente no email que chegou pra você no ato da sua inscri�
 
 ## Calendário
 
-Os conteúdos ficarão temporariamente disponíveis no nosso canal de eventos. Ative o lembrete:
+Os conteúdos ficarão temporariamente disponíveis no nosso website. 
 
-https://www.youtube.com/@DevsuperiorJavaSpring
+Horário: cada aula será liberada por volta das 9h, somente para quem estiver inscrito no treinamento. Fica de olho no seu email, Whatsapp ou Telegram.
+
 
 | Dia / horário  | Conteúdo |
 | ------------- | ------------- |
-| Segunda-feira 20h30 | Aula 1: Projeto estruturado |
-| Terça-feira 20h30  | Aula 2: Domínio e consultas |
-| Quarta-feira 20h30 | Aula 3: Deploy e CORS |
-| Quinta-feira 20h30 | Aula 4: Endpoint especial |
-| Sexta-feira 20h30 | Aula 5: Resumão e reforço do aprendizado |
-| Domingo 16h00 | Oficina: Avançando na modelagem de dados  |
+| Segunda-feira | Aula 1: Projeto estruturado |
+| Terça-feira | Aula 2: Domínio e consultas |
+| Quarta-feira | Aula 3: Homologação e CORS |
+| Quinta-feira | Aula 4: Endpoint especial |
+| Sexta-feira | Aula 5: Resumão e reforço do aprendizado |
 
 ## Modelo de domínio DSList
 
