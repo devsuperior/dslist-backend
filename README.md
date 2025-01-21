@@ -2,7 +2,7 @@
 
 **1. Perdeu alguma aula ou material de apoio?**
 
-Inscreva-se para receber no seu email:
+Inscreva-se para receber os conteúdos no seu email:
 
 https://devsuperior.com.br
 
@@ -14,18 +14,17 @@ Envie uma mensagem pra gente no email que chegou pra você no ato da sua inscri�
 
 ## Calendário
 
-Os conteúdos ficarão temporariamente disponíveis no nosso canal de eventos. Ative o lembrete:
+Os conteúdos ficarão temporariamente disponíveis no nosso website.
 
-https://www.youtube.com/@DevsuperiorJavaSpring
+Horário: cada aula será liberada por volta das 9h, somente para quem estiver inscrito no treinamento. Fica de olho no seu email, Whatsapp ou Telegram.
 
 | Dia / horário  | Conteúdo |
 | ------------- | ------------- |
-| Segunda-feira 20h30 | Aula 1: Projeto estruturado |
-| Terça-feira 20h30  | Aula 2: Modelo de domínio |
-| Quarta-feira 20h30 | Aula 3: Deploy e caso de uso |
-| Quinta-feira 20h30 | Aula 4: Endpoint especial |
-| Sexta-feira 20h30 | Aula 5: Resumão e reforço do aprendizado |
-| Domingo 16h00 | Oficina: Avançando na modelagem de dados  |
+| Segunda-feira 9h | Aula 1: Projeto estruturado |
+| Terça-feira 9h | Aula 2: Domínio e consultas |
+| Quarta-feira 9h | Aula 3: Homologação e CORS |
+| Quinta-feira 9h | Aula 4: Endpoint especial |
+| Sexta-feira 9h | Aula 5: Resumão e reforço do aprendizado
 
 ## Modelo de domínio DSList
 
@@ -67,6 +66,39 @@ spring.h2.console.path=/h2-console
 # Show SQL
 spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.format_sql=true
+```
+
+### application-dev.properties
+
+```
+#spring.jpa.properties.jakarta.persistence.schema-generation.create-source=metadata
+#spring.jpa.properties.jakarta.persistence.schema-generation.scripts.action=create
+#spring.jpa.properties.jakarta.persistence.schema-generation.scripts.create-target=create.sql
+#spring.jpa.properties.hibernate.hbm2ddl.delimiter=;
+
+spring.datasource.url=jdbc:postgresql://localhost:5432/dscatalog
+spring.datasource.username=postgres
+spring.datasource.password=1234567
+
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true
+spring.jpa.hibernate.ddl-auto=none
+```
+
+### application-prod.properties
+```
+spring.datasource.url=${DB_URL}
+spring.datasource.username=${DB_USERNAME}
+spring.datasource.password=${DB_PASSWORD}
+
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true
+spring.jpa.hibernate.ddl-auto=none
+```
+
+### system.properties
+```
+java.runtime.version=17
 ```
 
 ### WebConfig
@@ -142,3 +174,7 @@ INSERT INTO tb_belonging (list_id, game_id, position) VALUES (2, 8, 2);
 INSERT INTO tb_belonging (list_id, game_id, position) VALUES (2, 9, 3);
 INSERT INTO tb_belonging (list_id, game_id, position) VALUES (2, 10, 4);
 ```
+
+### Script Docker Compose
+
+https://gist.github.com/acenelio/5e40b27cfc40151e36beec1e27c4ff71
